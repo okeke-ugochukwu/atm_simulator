@@ -16,15 +16,21 @@ int main()
     if (userChoice == 1)
     {
         cout << "Enter amount to deposit" << endl;
-        cin >> amtToDeposit ;
+        cin >> amtToDeposit;
 
         cout << "New balance is " << amtToDeposit + initialAmount << endl;
     }
     else if(userChoice == 2) {
         cout << "Enter amount to withdraw" << endl;
-        cin >> amtToWithdraw ;
+        cin >> amtToWithdraw;
 
-        cout << "New balance is " << amtToDeposit + initialAmount << endl;
+        if (amtToWithdraw > initialAmount) {
+            cout << "Insufficient funds!" << endl;
+        }
+        else {
+            cout << "Remaining balance is" << initialAmount - amtToWithdraw << endl;
+        }
+
     }
     else {
         cout << "Invalid input" << endl;
