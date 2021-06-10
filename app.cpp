@@ -4,37 +4,37 @@ using namespace std;
 int main()
 {
     int initialAmount, userChoice, amtToDeposit, amtToWithdraw;
-    cout << "Starting Program.." << endl;
+    cout << "Starting ATM Simulator.." << endl;
 
     cout << "Enter amount" << endl;
     cin >> initialAmount ;
-
-    cout << "Press one for deposit" << endl;
-    cout << "Press two for withdrawal" << endl;
+    
+    cout << "ACCOUNT BALANCE: #" << initialAmount << endl;
+    cout << "Press 1 for deposit" << endl;
+    cout << "Press 2 for withdrawal" << endl;
     cin >> userChoice;
 
     if (userChoice == 1)
     {
+        cout << "Account balance: #" << initialAmount << endl;
         cout << "Enter amount to deposit" << endl;
         cin >> amtToDeposit;
 
-        cout << "New balance is " << amtToDeposit + initialAmount << endl;
+        cout << "New balance is #" << amtToDeposit + initialAmount << endl;
     }
-    else if(userChoice == 2) {
+    else if (userChoice == 2) {
+        cout << "Account balance: #" << initialAmount << endl;
         cout << "Enter amount to withdraw" << endl;
         cin >> amtToWithdraw;
 
         if (amtToWithdraw > initialAmount) {
-            cout << "Insufficient funds!" << endl;
+           cout << "Insufficient funds!" << endl;
         }
-        else {
-            cout << "New balance is " << initialAmount - amtToWithdraw << endl;
+        else
+        {
+            cout << "New balance is #" << initialAmount - amtToWithdraw << endl;
         }
-
-    }
-    else {
-        cout << "Invalid input" << endl;
+        
     }
     return 0;
-    
 }
