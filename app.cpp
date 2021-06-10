@@ -28,7 +28,7 @@ int main()
             cout << "Insufficient funds!" << endl;
         }
         else {
-            cout << "Remaining balance is" << initialAmount - amtToWithdraw << endl;
+            cout << "New balance is " << initialAmount - amtToWithdraw << endl;
         }
 
     }
